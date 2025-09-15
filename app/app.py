@@ -47,6 +47,5 @@ def main():
     print(f"Report saved to: {output_file}")
     print(f"Excluded directories: {', '.join(excluded)}")
 
-# main function
 if __name__ == "__main__":
     main()
