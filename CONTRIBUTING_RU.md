@@ -28,7 +28,7 @@
 
 ### Ваш первый вклад в код
 Не уверены, с чего начать? Вы можете начать с этих проблем, подходящих для новичков:
-- [Хорошие первые задачи](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [Первые задачи](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ### Pull Requests
 Процесс отправки изменений кода описан ниже.

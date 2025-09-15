@@ -28,7 +28,7 @@ This section guides you through submitting an enhancement suggestion, including 
 
 ### Your First Code Contribution
 Unsure where to begin contributing? You can start with these beginner-friendly issues:
-- [Good First Issues](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [First Issues](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ### Pull Requests
 The process for submitting code changes is outlined below.
