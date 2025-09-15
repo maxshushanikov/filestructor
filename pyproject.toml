@@ -1,0 +1,40 @@
+[project]
+name = "filestructor"
+version = "0.1.0"
+description = "Project structure generator with file content inspection"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+filestructor = "app.app:main"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "flake8>=6.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocstrings[python]>=0.24.0",
+    "mkdocs-static-i18n>=0.56"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+pythonpath = [
+    "."
+]
+testpaths = [
+    "tests"
+]

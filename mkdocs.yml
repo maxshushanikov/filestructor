@@ -1,0 +1,58 @@
+site_name: Filestructor
+site_description: Project structure generator with file content inspection
+site_author: Your Name
+repo_url: https://github.com/<YOUR_USERNAME>/filestructor
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        ru: Русский
+        de: Deutsch
+      nav_translations:
+        ru:
+          Home: Главная
+          Installation: Установка
+          Usage: Использование
+          CLI: CLI
+          API: API
+          Contributing: Вклад
+          Coverage Report: Отчёт о покрытии
+        de:
+          Home: Startseite
+          Installation: Installation
+          Usage: Nutzung
+          CLI: CLI
+          API: API
+          Contributing: Beitrag
+          Coverage Report: Testabdeckung
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - CLI: cli.md
+  - API: api.md
+  - Contributing: contributing.md
+  - Coverage Report: coverage/index.html
