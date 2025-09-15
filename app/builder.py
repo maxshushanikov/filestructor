@@ -1,11 +1,19 @@
 import os
-from components import FileComponent, DirectoryComponent
+import sys
+
+# Handle imports depending on execution context
+if __name__ == "__main__" or __package__ is None or __package__ == "":
+    # Running as a standalone script — adjust sys.path
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+    from app.components import FileComponent, DirectoryComponent
+else:
+    # Running as part of the package
+    from .components import FileComponent, DirectoryComponent
 
 class ProjectBuilder:
     """
     Builds a hierarchical file system tree starting from a given root path.
     """
-
     def __init__(self, root_path, excluded_dirs=None):
         """
         Args:
@@ -21,24 +29,31 @@ class ProjectBuilder:
 
     def _build_component(self, path):
         """Recursively build a file or directory component."""
+        if not os.path.exists(path):
+            return None
+            
         if os.path.isfile(path):
             return FileComponent(path)
-
+        
         directory = DirectoryComponent(path)
         if directory.name in self.excluded_dirs:
             return directory
-
+        
         try:
             items = os.listdir(path)
             dirs = [i for i in items if os.path.isdir(os.path.join(path, i)) and i not in self.excluded_dirs]
             files = [i for i in items if os.path.isfile(os.path.join(path, i))]
-
             for d in sorted(dirs):
                 directory.add_child(self._build_component(os.path.join(path, d)))
             for f in sorted(files):
                 directory.add_child(FileComponent(os.path.join(path, f)))
         except PermissionError:
             # Skip directories without read permissions
-            pass
-
+            print(f"Warning: Permission denied for {path}. Skipping.")
+        except FileNotFoundError:
+            # Handle case where directory no longer exists
+            print(f"Warning: Directory {path} no longer exists. Skipping.")
+        except Exception as e:
+            print(f"Error processing {path}: {str(e)}")
+            
         return directory

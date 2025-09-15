@@ -1,8 +1,8 @@
 [project]
 name = "filestructor"
-version = "0.1.0"
+version = "0.1.1"  # Увеличиваем версию
 description = "Project structure generator with file content inspection"
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Maxim Shushanikov", email = "maxim@example.com" }]
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
@@ -11,11 +11,11 @@ dependencies = []
 [project.scripts]
 filestructor = "app.app:main"
 
-
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
+    "pytest-mock>=3.0",  # Добавлен для улучшения тестирования
     "flake8>=6.0",
     "build>=1.0.0",
     "twine>=4.0.0",

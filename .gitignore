@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtualenv
+venv/
+ENV/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+.tox/
+.nox/
+test-results.xml
+test-report.html
+
+# Documentation
+site/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Project-specific files
+report.txt
+app/project_report.txt
+*.report
+*.log
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+
+# Pyre type checker
+.pyre/
