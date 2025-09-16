@@ -6,21 +6,23 @@ This script can be executed in two ways:
 2. As a standalone script:
    python app.py
 """
+
 import os
 import sys
 
 # Handle imports depending on execution context
 if __name__ == "__main__" or __package__ is None or __package__ == "":
     # Running as a standalone script — adjust sys.path
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-    from app.console import ConsoleInputHandler
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
     from app.builder import ProjectBuilder
+    from app.console import ConsoleInputHandler
     from app.visitors import ProjectStructureVisitor
 else:
     # Running as part of the package
-    from .console import ConsoleInputHandler
     from .builder import ProjectBuilder
+    from .console import ConsoleInputHandler
     from .visitors import ProjectStructureVisitor
+
 
 def main():
     """
@@ -34,8 +36,13 @@ def main():
     output_file = ConsoleInputHandler.get_output_file()
     # Directories to exclude from traversal
     excluded = {
-        '.git', '__pycache__', '.idea', 'venv', '.venv',
-        'node_modules', '.vscode'
+        ".git",
+        "__pycache__",
+        ".idea",
+        "venv",
+        ".venv",
+        "node_modules",
+        ".vscode",
     }
     # Build the file system tree
     builder = ProjectBuilder(directory, excluded)
@@ -46,6 +53,7 @@ def main():
     visitor.save_report()
     print(f"Report saved to: {output_file}")
     print(f"Excluded directories: {', '.join(excluded)}")
+
 
 if __name__ == "__main__":
     main()

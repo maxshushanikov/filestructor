@@ -1,5 +1,6 @@
 import os
 
+
 class ConsoleInputHandler:
     """Handles interactive console input for Filestructor."""
 
