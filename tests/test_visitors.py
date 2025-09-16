@@ -1,5 +1,3 @@
-import os
-
 from app.components import DirectoryComponent, FileComponent
 from app.visitors import ProjectStructureVisitor
 

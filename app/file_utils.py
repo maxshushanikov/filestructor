@@ -10,7 +10,7 @@ class FileUtils:
     MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
 
     @staticmethod
-    def get_file_type_description(file_path, type_map):
+    def get_file_type_desc(file_path, type_map):
         """Determines the file type by extension."""
         _, ext = os.path.splitext(file_path)
         return type_map.get(ext.lower(), "")
@@ -22,7 +22,7 @@ class FileUtils:
             # Checks file size
             file_size = os.path.getsize(file_path)
             if file_size > FileUtils.MAX_FILE_SIZE:
-                f_size = file_size/(1024*1024)
+                f_size = file_size / (1024 * 1024)
                 return f"[SKIPPED: File too large ({f_size:.1f} MB > 10 MB)]"
 
             # Reads small files.

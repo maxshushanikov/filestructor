@@ -54,7 +54,7 @@ class ProjectStructureVisitor(FileSystemVisitor):
     def visit_file(self, file, prefix, is_last):
         """Processes a file and adds it to the structure."""
         connector = "└── " if is_last else "├── "
-        desc = FileUtils.get_file_type_description(file.path, self.type_map)
+        desc = FileUtils.get_file_type_desc(file.path, self.type_map)
         self.structure.append(f"{prefix}{connector}{file.name}{desc}")
 
         # For binary files or files with descriptions, do not add content

@@ -1,5 +1,4 @@
 import builtins
-import tempfile
 
 from app.app import main
 

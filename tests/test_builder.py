@@ -22,8 +22,9 @@ def test_build_tree_creates_structure(sample_project):
     # Проверяем содержимое поддиректории
     for child in root.children:
         if child.name == "subdir":
-            assert any(grandchild.name == "file3.md" for grandchild in child.children)
-            assert any(grandchild.name == "file4.png" for grandchild in child.children)
+            cn = child.children
+            assert any(grandchild.name == "file3.md" for grandchild in cn)
+            assert any(grandchild.name == "file4.png" for grandchild in cn)
             break
     else:
         assert False, "subdir not found in root children"

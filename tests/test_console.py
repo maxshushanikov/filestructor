@@ -1,7 +1,5 @@
 import builtins
 
-import pytest
-
 from app.console import ConsoleInputHandler
 
 

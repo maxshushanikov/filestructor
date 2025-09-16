@@ -5,9 +5,9 @@ from app.file_utils import FileUtils
 
 
 def test_get_file_type_description():
-    type_map = {".txt": " [text]"}
-    assert FileUtils.get_file_type_description("file.txt", type_map) == " [text]"
-    assert FileUtils.get_file_type_description("file.unknown", type_map) == ""
+    t_map = {".txt": " [text]"}
+    assert FileUtils.get_file_type_desc("file.txt", t_map) == " [text]"
+    assert FileUtils.get_file_type_desc("file.unknown", t_map) == ""
 
 
 def test_read_file_content_text():
