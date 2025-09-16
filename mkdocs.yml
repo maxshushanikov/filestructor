@@ -40,7 +40,7 @@ plugins:
           Contributing: Вклад
           Coverage Report: Отчёт о покрытии
         de:
-          Home: Startseite
+          Home: Home(Startseite)
           Installation: Installation
           Usage: Nutzung
           CLI: CLI
