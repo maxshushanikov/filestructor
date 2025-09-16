@@ -27,9 +27,9 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        en: English
-        ru: Русский
-        de: Deutsch
+        - en
+        - ru
+        - de
       nav_translations:
         ru:
           Home: Главная

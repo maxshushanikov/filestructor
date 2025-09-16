@@ -1,29 +1,32 @@
-import os
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
+
 class FileUtils:
-    """Утилиты для операций с файлами."""
+    """Utilities for file operations."""
+
     MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
-    
+
     @staticmethod
-    def get_file_type_description(file_path, type_map):
-        """Определяет тип файла по расширению."""
+    def get_file_type_desc(file_path, type_map):
+        """Determines the file type by extension."""
         _, ext = os.path.splitext(file_path)
         return type_map.get(ext.lower(), "")
-    
+
     @staticmethod
     def read_file_content(file_path):
-        """Читает содержимое файла с обработкой ошибок."""
+        """Reads the contents of a file with error handling."""
         try:
-            # Проверяем размер файла
+            # Checks file size
             file_size = os.path.getsize(file_path)
             if file_size > FileUtils.MAX_FILE_SIZE:
-                return f"[SKIPPED: File too large ({file_size/(1024*1024):.1f} MB > 10 MB)]"
-                
-            # Читаем небольшие файлы
-            with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
+                f_size = file_size / (1024 * 1024)
+                return f"[SKIPPED: File too large ({f_size:.1f} MB > 10 MB)]"
+
+            # Reads small files.
+            with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 return f.read()
         except UnicodeDecodeError:
             return "[Binary file - content not displayed]"

@@ -1,6 +1,7 @@
 import builtins
-import tempfile
+
 from app.app import main
+
 
 def test_main_runs(monkeypatch, tmp_path):
     inputs = iter([str(tmp_path), "report.txt"])
