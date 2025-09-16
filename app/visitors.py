@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 class FileSystemVisitor:
-    """Базовый класс для посетителей файловой системы."""
+    """Base class for file system visitors."""
 
     def visit_file(self, file, prefix, is_last):
         raise NotImplementedError
@@ -17,7 +17,7 @@ class FileSystemVisitor:
 
 class ProjectStructureVisitor(FileSystemVisitor):
     """
-    Visitor, который генерирует отчет о структуре проекта с содержимым файлов.
+    Generates a report on the project structure with the contents of the files.
     """
 
     def __init__(self, output_file, excluded_dirs=None):
@@ -28,7 +28,7 @@ class ProjectStructureVisitor(FileSystemVisitor):
         self.type_map = self._create_type_map()
 
     def _create_type_map(self):
-        """Создает карту расширений файлов к их описаниям."""
+        """Creates a map of file extensions to their descriptions."""
         return {
             ".png": " [image]",
             ".jpg": " [image]",
@@ -52,21 +52,23 @@ class ProjectStructureVisitor(FileSystemVisitor):
         }
 
     def visit_file(self, file, prefix, is_last):
-        """Обрабатывает файл и добавляет его в структуру."""
+        """Processes a file and adds it to the structure."""
         connector = "└── " if is_last else "├── "
         desc = FileUtils.get_file_type_description(file.path, self.type_map)
         self.structure.append(f"{prefix}{connector}{file.name}{desc}")
 
-        # Для бинарных файлов или файлов с описанием не добавляем содержимое
+        # For binary files or files with descriptions, do not add content
         if desc or file.name.startswith(".") or ".min." in file.name:
-            content = f"\n{'='*50}\nFile: {file.path}\n{'='*50}\n[Content skipped for {desc.strip()}]"
+            skip_text = f"Content skipped for {desc.strip()}"
+            content = f"\n{'='*50}\nFile: {file.path}\n{'='*50}\n[{skip_text}]"
         else:
-            content = f"\n{'='*50}\nFile: {file.path}\n{'='*50}\n{FileUtils.read_file_content(file.path)}"
+            f_path = FileUtils.read_file_content(file.path)
+            content = f"\n{'='*50}\nFile: {file.path}\n{'='*50}\n{f_path}"
 
         self.content.append(content)
 
     def visit_directory(self, directory, prefix, is_last):
-        """Обрабатывает директорию и добавляет ее в структуру."""
+        """Processes a directory and adds it to the structure."""
         if directory.name in self.excluded_dirs:
             return
 

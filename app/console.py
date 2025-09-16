@@ -26,5 +26,7 @@ class ConsoleInputHandler:
         Returns:
             str: Output filename (default: project_report.txt).
         """
-        name = input("Enter output filename (default: project_report.txt): ").strip()
+        name = input(
+            "Enter output filename (default: project_report.txt): "
+        ).strip()
         return name or "project_report.txt"

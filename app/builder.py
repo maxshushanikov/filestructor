@@ -4,7 +4,9 @@ import sys
 # Handle imports depending on execution context
 if __name__ == "__main__" or __package__ is None or __package__ == "":
     # Running as a standalone script — adjust sys.path
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    sys.path.insert(
+        0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    )
     from app.components import DirectoryComponent, FileComponent
 else:
     # Running as part of the package
@@ -46,11 +48,14 @@ class ProjectBuilder:
             dirs = [
                 i
                 for i in items
-                if os.path.isdir(os.path.join(path, i)) and i not in self.excluded_dirs
+                if os.path.isdir(os.path.join(path, i))
+                and i not in self.excluded_dirs
             ]
             files = [i for i in items if os.path.isfile(os.path.join(path, i))]
             for d in sorted(dirs):
-                directory.add_child(self._build_component(os.path.join(path, d)))
+                directory.add_child(
+                    self._build_component(os.path.join(path, d))
+                )
             for f in sorted(files):
                 directory.add_child(FileComponent(os.path.join(path, f)))
         except PermissionError:

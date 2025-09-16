@@ -3,7 +3,9 @@ from abc import ABC, abstractmethod
 
 
 class FileSystemComponent(ABC):
-    """Abstract base class for file system components (files and directories)."""
+    """
+    Abstract base class for file system components (files and directories).
+    """
 
     def __init__(self, path):
         self.path = path
@@ -12,7 +14,6 @@ class FileSystemComponent(ABC):
     @abstractmethod
     def accept(self, visitor, prefix="", is_last=True):
         """Accept a visitor for processing this component."""
-        pass
 
 
 class FileComponent(FileSystemComponent):

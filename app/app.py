@@ -13,7 +13,9 @@ import sys
 # Handle imports depending on execution context
 if __name__ == "__main__" or __package__ is None or __package__ == "":
     # Running as a standalone script — adjust sys.path
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    sys.path.insert(
+        0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    )
     from app.builder import ProjectBuilder
     from app.console import ConsoleInputHandler
     from app.visitors import ProjectStructureVisitor

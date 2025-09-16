@@ -2,7 +2,8 @@
 Filestructor — project structure generator with file content inspection.
 Usage:
 - As a library: import ProjectBuilder, ProjectStructureVisitor, etc.
-- As a CLI: install the package and run `filestructor` or `python -m filestructor`
+- As a CLI: install the package and run `filestructor` or `python -m filestru
+  ctor`
 """
 
 __version__ = "0.1.0"
