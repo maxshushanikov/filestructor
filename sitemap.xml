@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+    </url>
+    <url>
+        <loc>Noneapi/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/api/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/api/"/>
+    </url>
+    <url>
+        <loc>Nonecli/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecli/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/cli/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/cli/"/>
+    </url>
+    <url>
+        <loc>Nonecontributing/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecontributing/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/contributing/"/>
+    </url>
+    <url>
+        <loc>Noneinstallation/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/installation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+    </url>
+    <url>
+        <loc>Noneusage/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/usage/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/usage/"/>
+    </url>
+    <url>
+        <loc>Noneru/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Noneru/api/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/api/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
+    </url>
+    <url>
+        <loc>Noneru/cli/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/cli/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/cli/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecli/"/>
+    </url>
+    <url>
+        <loc>Noneru/contributing/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecontributing/"/>
+    </url>
+    <url>
+        <loc>Noneru/installation/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+    </url>
+    <url>
+        <loc>Noneru/usage/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/usage/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+    </url>
+    <url>
+        <loc>Nonede/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/"/>
+    </url>
+    <url>
+        <loc>Nonede/api/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/api/"/>
+    </url>
+    <url>
+        <loc>Nonede/cli/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/cli/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecli/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/cli/"/>
+    </url>
+    <url>
+        <loc>Nonede/contributing/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonecontributing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/contributing/"/>
+    </url>
+    <url>
+        <loc>Nonede/installation/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/installation/"/>
+    </url>
+    <url>
+        <loc>Nonede/usage/</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="Nonede/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="Noneru/usage/"/>
+    </url>
+</urlset>
