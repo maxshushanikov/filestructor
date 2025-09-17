@@ -25,38 +25,35 @@ plugins:
             docstring_style: google
             show_source: true
   - i18n:
-      default_language: en
       languages:
         - locale: en
           name: English
           default: true
+          nav:
+            - Home: index.md
+            - Installation: installation.md
+            - Usage: usage.md
+            - CLI: cli.md
+            - API: api.md
+            - Contributing: contributing.md
+            - Coverage Report: coverage/index.html
         - locale: ru
           name: Русский
+          nav:
+            - Главная: index.md
+            - Установка: installation.md
+            - Использование: usage.md
+            - CLI: cli.md
+            - API: api.md
+            - Вклад: contributing.md
+            - Отчёт о покрытии: coverage/index.html
         - locale: de
           name: Deutsch
-      nav_translations:
-        ru:
-          Home: Главная
-          Installation: Установка
-          Usage: Использование
-          CLI: CLI
-          API: API
-          Contributing: Вклад
-          Coverage Report: Отчёт о покрытии
-        de:
-          Home: Home(Startseite)
-          Installation: Installation
-          Usage: Nutzung
-          CLI: CLI
-          API: API
-          Contributing: Beitrag
-          Coverage Report: Testabdeckung
-
-nav:
-  - Home: index.md
-  - Installation: installation.md
-  - Usage: usage.md
-  - CLI: cli.md
-  - API: api.md
-  - Contributing: contributing.md
-  - Coverage Report: coverage/index.html
+          nav:
+            - Startseite: index.md
+            - Installation: installation.md
+            - Nutzung: usage.md
+            - CLI: cli.md
+            - API: api.md
+            - Beitrag: contributing.md
+            - Testabdeckung: coverage/index.html
