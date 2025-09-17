@@ -27,15 +27,13 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        en:
+        - locale: en
           name: English
-          locale: en
-        ru:
-          name: Russian
-          locale: ru
-        de:
+          default: true
+        - locale: ru
+          name: Русский
+        - locale: de
           name: Deutsch
-          locale: de
       nav_translations:
         ru:
           Home: Главная
