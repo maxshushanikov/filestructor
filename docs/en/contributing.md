@@ -1,1 +1,2 @@
-# contributing
+﻿# Contributing
+Content coming soon...
