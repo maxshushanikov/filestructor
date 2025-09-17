@@ -9,8 +9,15 @@ on:
 jobs:
   build-test-docs:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          
+          persist-credentials: false 
 
       - uses: actions/setup-python@v5
         with:
@@ -34,15 +41,26 @@ jobs:
     needs: build-test-docs
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
+    
+    permissions:
+      contents: write  # ← Защищает от ошибки 403 (обязательно!)
+      
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0           # ← Обязательно!
+          persist-credentials: false # ← Обязательно!
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install MkDocs and plugins
+
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install -e .[dev]
+          python -m pip install --upgrade pip
+          pip install -e .[dev]   
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --force --no-history --site-dir site
