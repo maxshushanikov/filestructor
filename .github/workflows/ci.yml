@@ -46,18 +46,17 @@ jobs:
       - name: Build docs
         run: mkdocs build --strict
 
-      # Удаляем папку site перед сборкой пакета
-      - name: Remove site directory before build
-        run: rm -rf site
-
-      - name: Build package
-        run: python -m build
-
-      - name: Upload site artifact
+      - name: Upload site artifact  
         uses: actions/upload-artifact@v4
         with:
           name: site
           path: site
+
+      - name: Remove site directory before build 
+        run: rm -rf site
+
+      - name: Build package
+        run: python -m build
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
@@ -110,6 +109,7 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
           pip install twine
+          twine check dist/*
           twine upload --repository testpypi dist/*
 
   publish-pypi:
@@ -129,4 +129,5 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           pip install twine
+          twine check dist/*
           twine upload dist/*
