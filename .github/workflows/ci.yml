@@ -46,6 +46,7 @@ jobs:
       - name: Build docs
         run: mkdocs build --strict
 
+      # Удаляем папку site перед сборкой пакета
       - name: Remove site directory before build
         run: rm -rf site
 
