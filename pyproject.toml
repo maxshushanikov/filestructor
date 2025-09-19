@@ -11,7 +11,6 @@ dependencies = []
 keywords = ["project-structure", "scaffolding", "inspection", "generator"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Environment :: Console",
   "Topic :: Software Development :: Code Generators"
