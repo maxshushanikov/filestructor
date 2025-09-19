@@ -1,40 +1,53 @@
 [project]
-name = "filestructor"
-version = "0.1.1"  # Увеличиваем версию
+name = "structor"
+version = "0.1.1"
 description = "Project structure generator with file content inspection"
-authors = [{ name = "Maxim Shushanikov", email = "maxim@example.com" }]
+authors = [{ name = "Maxim Shushanikov", email = "max.shushanikov@gmail.com" }]
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.8"
 dependencies = []
+keywords = ["project-structure", "scaffolding", "inspection", "generator"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Software Development :: Code Generators"
+]
 
 [project.scripts]
-filestructor = "app.app:main"
+structor = "app.app:main"
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.0",
-    "pytest-cov>=4.0",
-    "pytest-mock>=3.0",  # Добавлен для улучшения тестирования
-    "flake8>=6.0",
-    "build>=1.0.0",
-    "twine>=4.0.0",
-    "mkdocs>=1.5.0",
-    "mkdocs-material>=9.0.0",
-    "mkdocstrings[python]>=0.24.0",
-    "mkdocs-static-i18n>=0.56"
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "pytest-mock>=3.0",
+  "flake8>=6.0",
+  "build>=1.0.0",
+  "twine>=4.0.0",
+  "mkdocs>=1.5.0",
+  "mkdocs-material>=9.0.0",
+  "mkdocstrings[python]>=0.24.0",
+  "mkdocs-static-i18n>=0.56"
 ]
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+exclude = ["site*", "tests*"]
+
 [tool.pytest.ini_options]
 minversion = "7.0"
 addopts = "-ra -q"
-pythonpath = [
-    "."
-]
-testpaths = [
-    "tests"
-]
+pythonpath = ["."]
+testpaths = ["tests"]

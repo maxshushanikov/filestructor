@@ -44,6 +44,10 @@ def main():
         ".venv",
         "node_modules",
         ".vscode",
+        ".bin",
+        ".gradle",
+        ".class",
+        ".jar"
     }
     # Build the file system tree
     builder = ProjectBuilder(directory, excluded)
