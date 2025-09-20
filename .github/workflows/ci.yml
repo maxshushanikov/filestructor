@@ -91,11 +91,22 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
+      - uses: actions/checkout@v4
+
       - name: Download dist artifact
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
+
+      - name: Check version not already on TestPyPI
+        run: |
+          VERSION=$(grep '^version =' pyproject.toml | sed -E 's/version = "(.*)"/\1/')
+          echo "Current version: $VERSION"
+          if pip index versions structor --index-url https://test.pypi.org/simple/ | grep -q "$VERSION"; then
+            echo "❌ Version $VERSION already exists on TestPyPI"
+            exit 1
+          fi
 
       - name: Publish to TestPyPI
         env:
@@ -119,11 +130,22 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'release'
     steps:
+      - uses: actions/checkout@v4
+
       - name: Download dist artifact
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
+
+      - name: Check version not already on PyPI
+        run: |
+          VERSION=$(grep '^version =' pyproject.toml | sed -E 's/version = "(.*)"/\1/')
+          echo "Current version: $VERSION"
+          if pip index versions structor | grep -q "$VERSION"; then
+            echo "❌ Version $VERSION already exists on PyPI"
+            exit 1
+          fi
 
       - name: Publish to PyPI
         env:
