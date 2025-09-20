@@ -1,6 +1,6 @@
-# Contributing to Filestructor
+# Contributing to Structorex
 
-Thank you for your interest in contributing to Filestructor! We welcome contributions from the community to help improve the project. This guide will help you get started with contributing code, documentation, and bug reports.
+Thank you for your interest in contributing to Structorex! We welcome contributions from the community to help improve the project. This guide will help you get started with contributing code, documentation, and bug reports.
 
 ## Table of Contents
 - [Code of Conduct](#code-of-conduct)
@@ -28,7 +28,7 @@ This section guides you through submitting an enhancement suggestion, including 
 
 ### Your First Code Contribution
 Unsure where to begin contributing? You can start with these beginner-friendly issues:
-- [First Issues](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [First Issues](https://github.com/yourusername/structorex/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ### Pull Requests
 The process for submitting code changes is outlined below.
@@ -39,8 +39,8 @@ The process for submitting code changes is outlined below.
    
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/your-username/filestructor.git
-   cd filestructor
+   git clone https://github.com/your-username/structorex.git
+   cd structorex
    ```
 
 3. **Create a virtual environment**:
@@ -56,13 +56,13 @@ The process for submitting code changes is outlined below.
 
 5. **Verify installation**:
    ```bash
-   filestructor --help
+   structorex --help
    ```
 
 ## Project Structure
 
 ```
-filestructor/
+structorex/
 ├── app/
 │   ├── __init__.py
 │   ├── app.py          # CLI entry point
@@ -91,7 +91,7 @@ filestructor/
 
 ## Testing
 
-Filestructor uses pytest for testing. Before submitting a pull request, ensure all tests pass:
+Structorex uses pytest for testing. Before submitting a pull request, ensure all tests pass:
 
 ```bash
 pytest -v
@@ -156,7 +156,7 @@ When adding new functionality, please include tests in the appropriate file in t
 
 When reporting bugs, please include:
 
-- Filestructor version
+- Structorex version
 - Python version
 - Operating system
 - Steps to reproduce the issue
@@ -176,4 +176,4 @@ Before submitting a feature request, please check if the feature has already bee
 
 ---
 
-Thank you for contributing to Filestructor!
+Thank you for contributing to Structorex!
