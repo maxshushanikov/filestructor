@@ -76,7 +76,7 @@ class ProjectStructureVisitor(FileSystemVisitor):
         self.structure.append(f"{prefix}{connector}{directory.name}/")
 
     def save_report(self):
-        """Сохраняет сгенерированный отчет в файл."""
+        """Saves the generated report to the file."""
         try:
             with open(self.output_file, "w", encoding="utf-8") as f:
                 f.write("PROJECT STRUCTURE:\n")

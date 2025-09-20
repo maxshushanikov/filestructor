@@ -1,9 +1,9 @@
-# Filestructor
+# Structorex
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**Filestructor** — это консольный инструмент, который генерирует подробный отчет о структуре вашего проекта, включая содержимое файлов. Он предоставляет визуальное представление иерархии каталогов и позволяет просматривать содержимое файлов непосредственно в сгенерированном отчете.
+**Structorex** — это консольный инструмент, который генерирует подробный отчет о структуре вашего проекта, включая содержимое файлов. Он предоставляет визуальное представление иерархии каталогов и позволяет просматривать содержимое файлов непосредственно в сгенерированном отчете.
 
 ## Возможности
 
@@ -17,14 +17,14 @@
 ## Установка
 
 ```bash
-pip install filestructor
+pip install structorex
 ```
 
 Или установка из исходников:
 
 ```bash
-git clone https://github.com/yourusername/filestructor.git
-cd filestructor
+git clone https://github.com/yourusername/structorex.git
+cd structorex
 pip install -e .
 ```
 
@@ -33,7 +33,7 @@ pip install -e .
 ### Интерфейс командной строки
 
 ```bash
-filestructor
+structorex
 ```
 
 Инструмент запросит у вас:
@@ -60,7 +60,7 @@ FILE CONTENTS:
 File: /path/to/my_project/src/main.py
 ==================================================
 def main():
-    print("Hello, Filestructor!")
+    print("Hello, Structorex!")
 
 if __name__ == "__main__":
     main()
@@ -87,7 +87,7 @@ pytest -v
 ## Структура проекта
 
 ```
-filestructor/
+structorex/
 ├── app/
 │   ├── __init__.py
 │   ├── app.py          # Точка входа CLI

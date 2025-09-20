@@ -2,7 +2,7 @@ import os
 
 
 class ConsoleInputHandler:
-    """Handles interactive console input for Filestructor."""
+    """Handles interactive console input for Structorex."""
 
     @staticmethod
     def get_directory():

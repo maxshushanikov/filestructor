@@ -4,22 +4,22 @@ from app.builder import ProjectBuilder
 
 
 def test_build_tree_creates_structure(sample_project):
-    # Добавляем исключенные директории
+    # Adds excluded directories
     excluded = {".git"}
     builder = ProjectBuilder(str(sample_project), excluded)
     root = builder.build_tree()
 
     assert root.name == os.path.basename(str(sample_project))
 
-    # Проверяем наличие основных файлов и директорий
+    # Checks the presence of basic files and directories
     assert any(child.name == "file1.txt" for child in root.children)
     assert any(child.name == "file2.py" for child in root.children)
     assert any(child.name == "subdir" for child in root.children)
 
-    # Проверяем, что исключенные директории не добавлены
+    # Checks that excluded directories are not added
     assert not any(child.name == ".git" for child in root.children)
 
-    # Проверяем содержимое поддиректории
+    # Checks the contents of the subdirectory
     for child in root.children:
         if child.name == "subdir":
             cn = child.children
