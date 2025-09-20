@@ -46,18 +46,17 @@ jobs:
       - name: Build docs
         run: mkdocs build --strict
 
-      # Удаляем папку site перед сборкой пакета
-      - name: Remove site directory before build
-        run: rm -rf site
-
-      - name: Build package
-        run: python -m build
-
       - name: Upload site artifact
         uses: actions/upload-artifact@v4
         with:
           name: site
           path: site
+
+      - name: Remove site directory before build
+        run: rm -rf site
+
+      - name: Build package
+        run: python -m build
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
@@ -74,9 +73,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
 
       - name: Download site artifact
         uses: actions/download-artifact@v4
@@ -85,13 +81,10 @@ jobs:
           path: site
 
       - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          mkdocs gh-deploy --force --no-history --site-dir site
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
 
   publish-testpypi:
     needs: build-test-docs
@@ -110,7 +103,16 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
           pip install twine
+          twine check dist/*
           twine upload --repository testpypi dist/*
+
+      - name: Verify install from TestPyPI
+        run: |
+          python -m venv venv-test
+          source venv-test/bin/activate
+          pip install --index-url https://test.pypi.org/simple/ \
+                      --extra-index-url https://pypi.org/simple structor
+          python -c "import app; print('✅ Package imported successfully')"
 
   publish-pypi:
     needs: build-test-docs
@@ -129,4 +131,5 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           pip install twine
+          twine check dist/*
           twine upload dist/*
