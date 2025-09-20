@@ -1,9 +1,9 @@
-# Filestructor
+# Structorex
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**Filestructor** is a command-line tool that generates a detailed report of your project's file structure, including file contents. It provides a visual representation of your directory hierarchy and allows you to inspect file contents directly in the generated report.
+**Structorex** is a command-line tool that generates a detailed report of your project's file structure, including file contents. It provides a visual representation of your directory hierarchy and allows you to inspect file contents directly in the generated report.
 
 ## Features
 
@@ -17,14 +17,14 @@
 ## Installation
 
 ```bash
-pip install filestructor
+pip install structorex
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/filestructor.git
-cd filestructor
+git clone https://github.com/yourusername/structorex.git
+cd structorex
 pip install -e .
 ```
 
@@ -33,7 +33,7 @@ pip install -e .
 ### Command Line Interface
 
 ```bash
-filestructor
+structorex
 ```
 
 The tool will prompt you for:
@@ -60,7 +60,7 @@ FILE CONTENTS:
 File: /path/to/my_project/src/main.py
 ==================================================
 def main():
-    print("Hello, Filestructor!")
+    print("Hello, Structorex!")
 
 if __name__ == "__main__":
     main()
@@ -87,7 +87,7 @@ pytest -v
 ## Project Structure
 
 ```
-filestructor/
+structorex/
 ├── app/
 │   ├── __init__.py
 │   ├── app.py          # CLI entry point

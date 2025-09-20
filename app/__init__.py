@@ -1,8 +1,8 @@
 """
-Filestructor — project structure generator with file content inspection.
+Structorex — project structure generator with file content inspection.
 Usage:
 - As a library: import ProjectBuilder, ProjectStructureVisitor, etc.
-- As a CLI: install the package and run `filestructor` or `python -m filestru
+- As a CLI: install the package and run `structorex` or `python -m filestru
   ctor`
 """
 
@@ -15,7 +15,6 @@ from .console import ConsoleInputHandler
 from .file_utils import FileUtils
 from .visitors import FileSystemVisitor, ProjectStructureVisitor
 
-# УБРАТЬ ЭТУ СТРОКУ: from .app import main
 __all__ = [
     "FileUtils",
     "FileSystemComponent",

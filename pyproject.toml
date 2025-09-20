@@ -1,5 +1,5 @@
 [project]
-name = "structor"
+name = "structorex"
 version = "0.1.1"
 description = "Project structure generator with file content inspection"
 authors = [{ name = "Maxim Shushanikov", email = "max.shushanikov@gmail.com" }]
@@ -17,7 +17,7 @@ classifiers = [
 ]
 
 [project.scripts]
-structor = "app.app:main"
+structorex = "app.app:main"
 
 [project.optional-dependencies]
 dev = [

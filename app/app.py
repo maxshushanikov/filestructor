@@ -1,8 +1,8 @@
 """
-Filestructor CLI application entry point.
+Structorex CLI application entry point.
 This script can be executed in two ways:
 1. As a module within the package:
-   python -m filestructor.app
+   python -m structorex.app
 2. As a standalone script:
    python app.py
 """
@@ -27,11 +27,11 @@ else:
 
 def main():
     """
-    Main CLI entry point for Filestructor.
+    Main CLI entry point for Structorex.
     Prompts the user for a directory path and output file name,
     builds the file system tree, and generates a report.
     """
-    print("=== Filestructor ===")
+    print("=== Structorex ===")
     # Get user input
     directory = ConsoleInputHandler.get_directory()
     output_file = ConsoleInputHandler.get_output_file()

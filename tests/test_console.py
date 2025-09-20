@@ -9,7 +9,7 @@ def test_get_directory_valid(tmp_path, monkeypatch):
 
 
 def test_get_directory_invalid(monkeypatch, tmp_path):
-    # Сначала вводим невалидные пути, затем валидный
+    # Enters invalid paths, then valid ones
     inputs = iter(["/invalid/path", "/invalid/path2", str(tmp_path)])
     monkeypatch.setattr(builtins, "input", lambda _: next(inputs))
     assert ConsoleInputHandler.get_directory() == str(tmp_path)
