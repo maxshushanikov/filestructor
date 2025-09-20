@@ -1,6 +1,6 @@
-# Участие в разработке Filestructor
+# Участие в разработке Structorex
 
-Спасибо за интерес к участию в разработке Filestructor! Мы приветствуем вклад сообщества для улучшения проекта. Этот гайд поможет вам начать работу с внесением кода, документации и отчетами об ошибках.
+Спасибо за интерес к участию в разработке Structorex! Мы приветствуем вклад сообщества для улучшения проекта. Этот гайд поможет вам начать работу с внесением кода, документации и отчетами об ошибках.
 
 ## Содержание
 - [Кодекс поведения](#кодекс-поведения)
@@ -28,7 +28,7 @@
 
 ### Ваш первый вклад в код
 Не уверены, с чего начать? Вы можете начать с этих проблем, подходящих для новичков:
-- [Первые задачи](https://github.com/yourusername/filestructor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [Первые задачи](https://github.com/yourusername/structorex/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 ### Pull Requests
 Процесс отправки изменений кода описан ниже.
@@ -39,8 +39,8 @@
    
 2. **Клонируйте свой форк** локально:
    ```bash
-   git clone https://github.com/ваш-пользователь/filestructor.git
-   cd filestructor
+   git clone https://github.com/ваш-пользователь/structorex.git
+   cd structorex
    ```
 
 3. **Создайте виртуальное окружение**:
@@ -57,13 +57,13 @@
 
 5. **Проверьте установку**:
    ```bash
-   filestructor --help
+   structorex --help
    ```
 
 ## Структура проекта
 
 ```
-filestructor/
+structorex/
 ├── app/
 │   ├── __init__.py
 │   ├── app.py          # Точка входа CLI
@@ -92,7 +92,7 @@ filestructor/
 
 ## Тестирование
 
-Filestructor использует pytest для тестирования. Перед отправкой pull request убедитесь, что все тесты проходят:
+Structorex использует pytest для тестирования. Перед отправкой pull request убедитесь, что все тесты проходят:
 
 ```bash
 pytest -v
@@ -157,7 +157,7 @@ pytest -v --cov=app --cov-report=html
 
 При сообщении об ошибках, пожалуйста, включите:
 
-- Версию Filestructor
+- Версию Structorex
 - Версию Python
 - Операционную систему
 - Шаги для воспроизведения проблемы
@@ -177,4 +177,4 @@ pytest -v --cov=app --cov-report=html
 
 ---
 
-Спасибо за участие в разработке Filestructor!
+Спасибо за участие в разработке Structorex!
