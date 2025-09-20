@@ -4,7 +4,7 @@ version = "0.1.1"
 description = "Project structure generator with file content inspection"
 authors = [{ name = "Maxim Shushanikov", email = "max.shushanikov@gmail.com" }]
 readme = "README.md"
-license = { file = "LICENSE" }
+license = { text = "MIT" }
 requires-python = ">=3.8"
 dependencies = []
 keywords = ["project-structure", "scaffolding", "inspection", "generator"]
