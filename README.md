@@ -23,7 +23,7 @@ pip install structorex
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/structorex.git
+git clone https://github.com/structorex/structorex.git
 cd structorex
 pip install -e .
 ```
